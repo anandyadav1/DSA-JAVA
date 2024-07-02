@@ -1,4 +1,4 @@
-public class PrifixSubArray {
+public class PrefixSubArray {
 
     public static void printbyPrifix(int numbers[]){
         int max= Integer.MIN_VALUE;
@@ -34,7 +34,8 @@ public class PrifixSubArray {
         System.out.println(max);
     }
     public static void main(String[] args) {
-        int numbers[] = {2, 4, 5, -7, 8, -9, 5, -12, -21};
+        int numbers[] = {3, 2, 4, -5};
+        // int numbers[] = {2, 4, 5, -7, 8, -9, 5, -12, -21};
         printbyPrifix(numbers);
     }
 }
