@@ -112,6 +112,25 @@ public class LinkedList {
         System.out.println("null");
     }
 
+
+
+    //find key
+    public int findKey(int key){
+        int i=0;
+        Node temp = head;
+        while (temp != null) {
+            if(temp.data == key){
+                return i;
+            }
+            temp=temp.next;
+            i++;
+        }
+        return -1;    //key is not found
+    }
+
+
+
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList(); // Use HelloWorld class for custom linked list
         ll.addFirst(56);
@@ -120,14 +139,7 @@ public class LinkedList {
         ll.addLast(89);
         ll.addFirst(63);
         ll.addLast(59);
-        ll.addIndex(95, 1);
-        System.out.println("size= "+size);
-        System.out.println("Remove from first element ="+ll.removeFirst());
-        System.out.println("Remove from first element ="+ll.removeFirst());
-        printFuntion();
-        System.out.println("size= "+size);
-        printFuntion();
-        System.out.println("Remove from last element ="+ll.removeLast());
+        ll.addIndex(95, 4);
         printFuntion();
         System.out.println("size= "+size);
     }
