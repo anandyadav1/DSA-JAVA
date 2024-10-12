@@ -36,7 +36,7 @@ public class reverse {
         String str=sc.nextLine();
         int n= str.length();
         System.out.println(call(str));
-        call1(str);
+        // call1(str);
         System.out.println(n);
     }
 }
