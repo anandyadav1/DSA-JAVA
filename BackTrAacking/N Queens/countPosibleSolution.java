@@ -6,6 +6,7 @@ public class countPosibleSolution {
 
 public static void nQueen(char board[][], int row) {
     if (row == board.length) {
+        printBoard(board);
         count ++;
         return;
     }
@@ -73,6 +74,7 @@ public static void nQueen(char board[][], int row) {
         }
 
         nQueen(board, 0);
+        // printBoard(board);
         System.out.println("\nAll posible solutions for N*N Queens \n" + count);
 
     }

@@ -8,7 +8,7 @@ public class catalan {
             return 1;
         }
         int ans=0;
-        for(int i=0; i<=n-1; i++){
+        for(int i=0; i<n; i++){
             ans +=recursion(i)*recursion(n-i-1);
         }
         return ans;
@@ -43,10 +43,10 @@ public class catalan {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the any number for catalan number :");
         int n=sc.nextInt();
-        // System.out.println("Catalan number for "+n+" using recursion "+" : "+recursion(n));
-        // int dp[]=new int[n+1];
-        // Arrays.fill(dp,-1);
-        // System.out.println("Catalan number for "+n+" using memuizations "+" : "+memuization(n,dp));
+        System.out.println("Catalan number for "+n+" using recursion "+" : "+recursion(n));
+        int dp[]=new int[n+1];
+        Arrays.fill(dp,-1);
+        System.out.println("Catalan number for "+n+" using memuizations "+" : "+memuization(n,dp));
         System.out.println("Catalan number for "+n+" using tabulations "+" : "+tabulations(n));
     }
 }

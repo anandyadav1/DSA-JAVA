@@ -25,7 +25,7 @@ public class sentense {
 
         String arr[] = str.split(" ");
         for(String word:arr){
-            System.out.print(word);
+            System.out.print(word+" ");
         }
         System.out.println();
         for (int i = 0; i < arr.length; i++) {

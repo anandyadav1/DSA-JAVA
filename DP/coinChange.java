@@ -15,18 +15,12 @@ public class coinChange {
                 }
             }
         }
-        for(int row[]:dp){
-            for(int r:row){
-                System.out.print(r+"  ");
-            }
-            System.out.println();
-        }
         return dp[n][sum];
 
     }
     public static void main(String[] args) {
-        int coins[]={2,5,3,6};
-        int sum=10;
+        int coins[]={1,2,3};
+        int sum=4;
         System.out.println(tabulations(coins,sum));
     }
 }

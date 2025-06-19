@@ -6,7 +6,10 @@ public class posibleSol {
 
 public static void nQueen(char board[][], int row) {
     if (row == board.length) {
-        printBoard(board);
+        if (count ==1) {
+            printBoard(board);
+            return;
+        }
         count ++;
         return;
     }

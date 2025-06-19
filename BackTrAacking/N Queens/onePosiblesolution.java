@@ -1,22 +1,25 @@
 import java.util.Scanner;
 
 public class onePosiblesolution {
-    public static boolean nQueen(char board[][], int row) {
+
+    public static void nQueen(char board[][], int row) {
         if (row == board.length) {
-            return  true;
+            if (count ==1) {
+                printBoard(board);
+                return;
+            }
+            count ++;
+            return;
         }
         // column loop
         for (int j = 0; j < board.length; j++) {
-            if (isSafe(board, row+1, j)) {
+            if(isSafe(board, row, j)){
                 board[row][j] = 'Q';
-                if(nQueen(board, row + 1)){
-                    return true;
-                }
+                nQueen(board, row + 1); // function call
                 board[row][j] = 'X'; // Backttracking step
             }
         }
-        return false;
-
+    
     }
 
     public static boolean isSafe(char board[][], int row, int col) {
@@ -70,7 +73,7 @@ public class onePosiblesolution {
             }
         }
 
-        if(nQueen(board, 0)){
+        if(nQueen(board,0)){
             System.out.println("Solution is posible ");
             printBoard(board);
         }else{

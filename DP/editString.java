@@ -4,10 +4,10 @@ public class editString {
         int m=str2.length();
         int dp[][]=new int[n+1][m+1];
         for(int i=0; i<n+1; i++){
-            for(int j=0; j<m+1; j++){
-                if(i==0) dp[i][j]=j;
-                if(j==0) dp[i][j]=i;
-            }
+            dp[i][0]=i;
+        }
+        for(int i=0; i<m+1; i++){
+            dp[0][i]=i;
         }
 
         for(int i=1; i<n+1; i++){
@@ -22,6 +22,12 @@ public class editString {
                     dp[i][j]=Math.min(add,Math.min(del,rep));
                 }
             }
+        }
+        for(int row[]:dp){
+            for(int r:row){
+                System.out.print(r+"  ");
+            }
+            System.out.println();
         }
         return dp[n][m];
     }

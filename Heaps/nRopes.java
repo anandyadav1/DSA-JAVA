@@ -2,7 +2,7 @@ import java.util.PriorityQueue;
 
 public class nRopes {
     public static void main(String[] args) {
-        int ropes[]={3,2,5,2gi};
+        int ropes[]={3,2,5,2};
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for(int i=0; i<ropes.length; i++){
             pq.add(ropes[i]);

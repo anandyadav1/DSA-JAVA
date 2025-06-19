@@ -10,10 +10,7 @@ public class lis_increasing {
                 if(arr1[i-1]==arr2[j-1]){
                     dp[i][j]=dp[i-1][j-1]+1;
                 }else{
-                    int ans1=dp[i][j-1];
-                    int ans2=dp[i-1][j];
-
-                    dp[i][j]=Math.max(ans1,ans2);
+                    dp[i][j]=Math.max(dp[i][j-1],dp[i-1][j]);
                 }
             }
         }

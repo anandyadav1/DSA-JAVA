@@ -1,11 +1,14 @@
 public class subSets {
+    public static int c=0;
     public static void subsets(String str, String ans, int i) {
         // Base case
         if (i == str.length()) {
             if (ans.length() == 2) {
-                System.out.println("null");
+                c++;
+                System.out.println(c+" : "+" null");
             } else {
-                System.out.println(ans);
+                c++;
+                System.out.println(c+" : "+ans);
             }
             return;
         }
@@ -19,7 +22,7 @@ public class subSets {
     }
 
     public static void main(String[] args) {
-        String str = "abs";
+        String str = "abc";
         subsets(str, "  ", 0);
     }
 }
