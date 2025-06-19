@@ -11,7 +11,7 @@ class Edge {
 }
 
 public class detectCycleDirected {
-
+    static Stack<Integer> st = new Stack<>();
     public static boolean dfsUtil(int src, boolean vis[], boolean pathCheck[], ArrayList<Edge> adj[]) {
         vis[src] = true;
         pathCheck[src] = true;
@@ -24,6 +24,7 @@ public class detectCycleDirected {
             }
         }
         pathCheck[src] = false;
+        st.push(src);
 
         return false;
     }
@@ -57,5 +58,11 @@ public class detectCycleDirected {
 
         boolean vis[] = new boolean[V];
         System.out.println(dfs(vis, adj));
+        System.out.println();
+        if(st.size()!=V){
+            System.out.println("true");
+        }else{
+            System.out.println("false");
+        }
     }
 }
