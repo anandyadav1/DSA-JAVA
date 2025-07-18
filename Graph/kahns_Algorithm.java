@@ -12,7 +12,7 @@ public class kahns_Algorithm {
     static List<Integer> list = new ArrayList<>();
     public static void createGraph(ArrayList<Edge> adj[]) {
         for (int i = 0; i < adj.length; i++) {
-            adj[i] = new ArrayList<>();
+            adj[i] = new ArrayList<Edge>();
         }
         adj[2].add(new Edge(2, 3));
 

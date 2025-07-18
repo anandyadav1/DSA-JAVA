@@ -45,7 +45,7 @@ public class detectCycleDirected {
         int V = 4;
         ArrayList<Edge> adj[] = new ArrayList[V];
         for (int i = 0; i < V; i++) {
-            adj[i] = new ArrayList<>();
+            adj[i] = new ArrayList<Edge>();
         }
 
         adj[0].add(new Edge(0, 2));

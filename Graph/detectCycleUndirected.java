@@ -41,7 +41,7 @@ public class detectCycleUndirected {
 
     public static void createGraph(ArrayList<Edge> adj[]) {
         for (int i = 0; i < adj.length; i++) {
-            adj[i] = new ArrayList<>();
+            adj[i] = new ArrayList<Edge>();
         }
 
         adj[0].add(new Edge(0, 1));
