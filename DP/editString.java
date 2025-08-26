@@ -16,7 +16,7 @@ public class editString {
                     dp[i][j]=dp[i-1][j-1];
                 }else{
                     int add=dp[i][j-1]+1;
-                    int del=dp[i-1][j-1]+1;
+                    int del=dp[i-1][j]+1;
                     int rep=dp[i-1][j-1]+1;
 
                     dp[i][j]=Math.min(add,Math.min(del,rep));

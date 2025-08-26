@@ -8,16 +8,17 @@ public class longestCommonPalindrome {
             for(int  j=1; j<m+1; j++){
                 if(str.charAt(i-1)==sb.charAt(j-1)){
                     dp[i][j]=dp[i-1][j-1]+1;
-                    ans=Math.max(ans, dp[i][j]);
+                    // ans=Math.max(ans, dp[i][j]);
                 }else{
-                    dp[i][j]=0;
+                    dp[i][j]=Math.max(dp[i-1][j],dp[i][j-1]);
                 }
             }
         }
-        return ans;
+        return dp[n][m];
     }
     public static void main(String[] args) {
-        String str="madamsdkjgs";
+        String str="babad";
+        // String str="madamsdkjgs";
         StringBuilder sb = new StringBuilder(str);
         System.out.println(sb.reverse().toString());
         System.out.println(call(str,sb));;
