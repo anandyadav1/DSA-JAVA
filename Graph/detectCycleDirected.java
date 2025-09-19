@@ -41,6 +41,17 @@ public class detectCycleDirected {
         return false;
     }
 
+    public static boolean check(ArrayList<Edge> graph[],int src, int vis[]){
+        vis[src]=1;    //1 means visit ho raha hai
+        for(Edge e:graph[src]){
+            int dest=e.dest;
+            if(vis[dest]==1) return true;
+            if(vis[dest]==0  && check(graph,dest,vis)) return true;    //0 mean abhi unvisit hai
+        }
+        vis[src]=2;    //2 means visit ho chuka hai
+        return false;
+    }
+
     public static void main(String[] args) {
         int V = 4;
         ArrayList<Edge> adj[] = new ArrayList[V];
@@ -64,5 +75,17 @@ public class detectCycleDirected {
         }else{
             System.out.println("false");
         }
+        System.out.println();
+        int vist[]=new int[V];
+        for(int i=0; i<V; i++){
+            if(vist[i]==0){
+                if(check(adj,i,vist)){
+                    System.out.println(true);
+                    return;
+                }
+            }
+        }
+        System.out.println(false);
+
     }
 }
